@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": false,
     "experimentalDecorators": true,
     "lib": [
+			"es2019",
       "es2015",
       "scripthost",
       "es2015.promise",
