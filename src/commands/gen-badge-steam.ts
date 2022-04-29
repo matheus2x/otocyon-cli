@@ -1,4 +1,5 @@
 import axios from "axios";
+import filenamify from "filenamify";
 import { GluegunCommand } from "gluegun";
 
 import { env, nodePort } from "../config/environment";
@@ -47,7 +48,7 @@ const genBadgeSteam: GluegunCommand = {
 
 		await template.generate({
 			template: "steam-badge.ts.ejs",
-			target: `models/${gameName.replace(/\s/g, "")}-model.html`,
+			target: `models/${filenamify(gameName)}-model.html`,
 			props: {
 				gameName,
 				gameThumb,
