@@ -17,6 +17,7 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "sourceMap": false,
+		"esModuleInterop": true,
     "inlineSourceMap": true,
     "outDir": "build",
     "strict": false,

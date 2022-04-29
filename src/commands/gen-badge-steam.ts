@@ -1,6 +1,9 @@
 import axios from "axios";
-import filenamify from "filenamify";
+import "sanitize-filename";
 import { GluegunCommand } from "gluegun";
+
+/* eslint-disable @typescript-eslint/no-var-requires */
+const sanitize = require("sanitize-filename");
 
 import { env, nodePort } from "../config/environment";
 
@@ -48,7 +51,7 @@ const genBadgeSteam: GluegunCommand = {
 
 		await template.generate({
 			template: "steam-badge.ts.ejs",
-			target: `models/${filenamify(gameName)}-model.html`,
+			target: `models/${sanitize(gameName).replace()}-model.html`,
 			props: {
 				gameName,
 				gameThumb,

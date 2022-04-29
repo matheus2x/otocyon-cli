@@ -30,8 +30,8 @@
   "dependencies": {
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
-    "filenamify": "^5.1.1",
-    "gluegun": "latest"
+    "gluegun": "latest",
+    "sanitize-filename": "^1.6.3"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
