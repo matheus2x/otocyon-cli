@@ -8,7 +8,9 @@ const sanitize = require("sanitize-filename");
 import { env, nodePort } from "../config/environment";
 
 const otocyonBaseURL =
-	env === "dev" ? `http://localhost:${nodePort}` : "otocyon.herokuapp.com";
+	env === "dev"
+		? `http://localhost:${nodePort}`
+		: "https://otocyon.herokuapp.com";
 
 const otocyonAPI = axios.create({ baseURL: otocyonBaseURL });
 
